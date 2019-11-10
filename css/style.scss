@@ -1,0 +1,139 @@
+/*Variables*/
+$brownLineColor: rgb(159, 71, 21);
+$footerFontColor: white;
+$linearGradiantBackground: linear-gradient(to right,  gray 5%,#f6f6f6 62%);
+$menuBackgroundColor: rgb(49, 80,62);
+
+
+/*Mixins*/
+@mixin removeSidePadding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*Style Tags*/
+#blackWhiteGradiantId {
+    background: $linearGradiantBackground;
+    height: 82px;
+    width: 100%;
+}
+
+body {
+    margin: 0%;
+    height: 100%;
+    display:block; 
+    width:100%; 
+    height:95vh !important; 
+}
+
+.brownLineSeparator{
+    background:$brownLineColor;
+    height: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.col{
+    p{
+        margin: 0px;
+    }
+}
+
+#customFooter{
+    padding-top:10px;
+    padding-bottom:20px;
+    color:$footerFontColor;
+
+    &.container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+#descriptionId{
+    margin: 10px;
+    width: 100%;
+    height: auto;
+
+    .container{
+        padding-top: 40px;
+        @include removeSidePadding;
+    } 
+}
+
+div{
+    @include removeSidePadding;
+}
+
+#footerImageBackgroundId {
+    background-image: url("../img/footer-background.png");
+    width:100%; 
+    background-position: 20%, 10%;
+}
+
+#forPatientsDivId{
+    padding-left: 30px;
+    h5{
+        color:$brownLineColor;
+    }
+}
+
+#generalInfoDiv{
+    p{
+        text-decoration: underline;
+        margin:0px;
+    }
+    h5{
+        padding:0px;
+        margin:0px;
+    }
+}
+
+#headerOneStyle{
+    color: $menuBackgroundColor;
+    margin-bottom: 0px;
+}
+
+#headerTwoStyle{
+    color: $brownLineColor;
+}
+
+#imageBackgroundId {
+    background-image: url("../img/header-background.png");
+    width: 100%;
+    height: 71px;
+    background-position: 100%, 0%;
+    color: $brownLineColor;
+    font-weight: bold;
+    .container{
+        @include removeSidePadding;
+    }
+
+    h3{
+        padding-top:15px;
+    }
+}
+
+#inner{
+    width:100%; 
+    display:block; 
+}
+
+#menuDivId {
+    background-color: $menuBackgroundColor;
+    height: 45px;
+    widows: 100%;
+}
+
+.patientButtonsClass{
+    font-size: 100%;
+    font-family: inherit;
+    border:0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom:10px;
+    font-size: 20px;
+    margin-bottom:10px;
+    color:$footerFontColor;
+    background-color:$brownLineColor;
+}
