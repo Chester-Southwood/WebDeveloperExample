@@ -2,6 +2,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Features I wasn't to implement as properly as Intended
+
+    * The site itself is a little off center, resulting in difficulty in both correcting and difficulty for proper resizing on smaller screensizes
+    * Resizability could be much better if given more time. My first attempt was to mimic the given photo and refactor to have resizability
+      I found that was a mistake on my part that I wish I focused more on from the start with bootstrap.
+    * The hamburger Icon is on the left of the page when the screensize shrinks. It can easily be put back to the right,
+      but doing so results in a previous error to occur with the last navbar element dropping down to soon when resizing.
+      
+-->
+
+<!-- Tools used
+
+    * Visual Studio Code was useful due to several extensions allowing testing easier and sass auto generation.
+    * SASS (syntactically awesome style sheets) was used to help decouple and make logic easier to read/edit for the css.
+        * They are auto-generated to normal css files that are instead added to the project. Sass is great for the editor,
+          it's not meant for the client to see. (Resulting in somewhat confusing notes if SASS specific)
+    * Bootstrap was used to help with a better layout, and have it better resizable to different screen sizes.
+
+-->
+
 <head>
     <title>Doctor's Website Example</title>
     <meta charset="utf-8" />
@@ -13,33 +33,44 @@
 </head>
 
 <body>
-
     <div class="brownLineSeparator"></div>
-    <div id="blackWhiteGradiantId">
-        <img src="./img/logo.png">
-    </div>
+    <header id="blackWhiteGradiantId">
+        <div class="container">
+                <div id="headerRowId" class="row">
+                    <div class="col-1">
+                        <img src="./img/logo.png">
+                    </div>
+                    <div class="col-4">
+                        <h5 id="companyNameClass">The Inland Northwest's<br>Premier Doctor Practice</h5>
+                    </div>
+                    <div class="col-5">
+                        <h5 id="companyPhoneClass">Southwest Office: (555) 555-5555<br>Northwest Office: (555) 555-5555</h5>
+                    </div>
+                </div>
+        </div>
+    </header>
     <div id="menuDivId">
         <div class="container">
             <div class="col-10">
-                <nav class="navbar navbar-expand-lg">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="nav navbar-nav ml-auto"> <!--TODO: Links aren't being underline when hovered.. Unknown reasons why since hover tag is added to link tag-->
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Doctors</a>
-                            </li>
+                        <ul class="nav navbar-nav navbarMargin"> 
                             <li class="nav-item">
+                                <a class="nav-link" href="">Doctors</a>
+                            </li>
+                            <li class="nav-item navItemWithBorder">
                                 <a class="nav-link" href="#">Services</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item navItemWithBorder">
                                 <a class="nav-link" href="#">Patients</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item navItemWithBorder">
                                 <a class="nav-link" href="#">Office Info</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item navItemWithBorder">
                                 <a class="nav-link" href="#">Contact</a>
                             </li>
                         </ul>
@@ -50,7 +81,7 @@
     </div>
     <div id="imageBackgroundId">
         <div class="container">  
-            <header> <!--TODO Fix size of h3 to match h1 for headerOneStyle, size should not be hardcoded for div-->
+            <header>
                 <h3>
                     Meet Our Doctors
                 </h3>
@@ -64,8 +95,8 @@
                     <h2 id="headerOneStyle">Header One Style</h2>
                     <p>Na cit pede selo weni ga exasifa rateke! Ibenujo ute ke lu piecopih hihiey oyoset. Irayiti ri re oriver teyesoc lixuhi. Ce iehedo sesed eteto gero pebabe suced yaribe, lisen noro ti femih! Elip tutoruk eniteb mitis ahibupep itotis tiy: Soraco serap benebi. Sunos tic cabeki uras we. Nehon fecete cen. Mifoni yemop geme cirerid onacil tite! Siy uta kagal. Cowibiec ewie ca nuciben bepiri nudanih. Renoran tiero da mut xieleton arohiec ahofap gelozut suvep, wovob alenir fiti arew fe tunisaf epietu fa acih celoy; peri pu ieser rixe resule caheno malonuv</p>
                     <h4 id="headerTwoStyle">Header Two Style</h4>
-                    <p
-                        >Cop doseher zil ore: Recegoc capa lerie nur yo neduyen henene sow tosote; rimu cob xax pileni ta tetiso numidil fadir setesa osi. Nanog cap iso got tuto pel ram! Tepafa onofera nepa hac ogeca tur. Lemik ririra la cen iemag erune cotavil ricac zese. Nor nicu bieta ecewuran, rop tu atil nedaror ema? Ata panaku di ti dohot le ulehate cayote ramulak ti. Wey si neyani tol adelu yadeh rodatar henosos soqa: Ikitos isatar cehep iegiyaxut pisero nav rate: Tudetah atietoni acatocis pasoh bete nukaso gac ta ka ri, arotoyem necar ele ge ci kahure wotiet tata atelace tu. Rece loco wu god mesieyu? Ecir bifofa mal etuhebe ameketot cosi beco, hoser tisur hiet ruro cie tuci biy.
+                    <p>
+                        Cop doseher zil ore: Recegoc capa lerie nur yo neduyen henene sow tosote; rimu cob xax pileni ta tetiso numidil fadir setesa osi. Nanog cap iso got tuto pel ram! Tepafa onofera nepa hac ogeca tur. Lemik ririra la cen iemag erune cotavil ricac zese. Nor nicu bieta ecewuran, rop tu atil nedaror ema? Ata panaku di ti dohot le ulehate cayote ramulak ti. Wey si neyani tol adelu yadeh rodatar henosos soqa: Ikitos isatar cehep iegiyaxut pisero nav rate: Tudetah atietoni acatocis pasoh bete nukaso gac ta ka ri, arotoyem necar ele ge ci kahure wotiet tata atelace tu. Rece loco wu god mesieyu? Ecir bifofa mal etuhebe ameketot cosi beco, hoser tisur hiet ruro cie tuci biy.
 
                         Erixedo ma sonune orie lo iya ico ki. Anisi ru tel riwacup imetesor fese hapogi rehol. Ga toneto do! Kidile catorey ra rocar cene tararek era ubabi ena buk. Ieteda apeyis lesidip ihivabe iluzol nas tag haroy. Ece doteno elele aqeno nu ta sega surota ifibied asorora: Yunus cusila mo iwor ciesa mo loto zayere rati mie.
                         
@@ -75,9 +106,11 @@
                 <div id="forPatientsDivId" class="col-3">
                     <h5>For Patients</h5>
                     <p>Download and print patient forms, sign into the patient portal or schedule an appointment.</p>
-                    <button class="patientButtonsClass">Patient Forms >></button> <!--Should be links, not buttons. I made the same mistake as I did for earlier project. Simple design should be followed. A link should be a link, a button should not be hidden as a link, not good experience for screenreaders...-->
-                    <button class="patientButtonsClass">Patient Portal >></button>
-                    <button class="patientButtonsClass">Make an Appointment >></button>
+                    <a href=""><p class="patientLinksClass">Patient Forms >></p></a> <!--Should be links, not buttons. I made the same mistake as I did for earlier project. Simple design should be followed. A link should be a link, a button should not be hidden as a link, not good experience for screenreaders...-->
+                    <a href=""><p class="patientLinksClass">Patient Portal >></p></a>
+                    <a href=""><p class="patientLinksClass">Make an Appointment >></p></a>
+                </p>
+                </p>
                 </div>
             </div>
         </div>
@@ -85,35 +118,41 @@
     <div class="brownLineSeparator"></div>
     <div id="inner">
         <div id="footerImageBackgroundId" >
-                <footer class="footer">
-                    <div id="customFooter" class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <p>Doctors</p>
-                                    <p>Services</p>
-                                    <p>Patients</p>
-                                    <p>Office Info</p>
-                                    <p>Patient Forms</p>
-                                    <p>News</p>
-                                    <p>Contact</p>
-                                </div>
-                                <div id="generalInfoDiv" class="col-6">
-                                    <h5>General Office Info</h5>
-                                    <p>Office Locations</p>
-                                    <p>Hours & Appointments</p>
-                                    <p>Emergencies</p>
-                                    <p>Telephone Calls</p>
-                                    <p>Prescriptions</p>
-                                    <p>Billing & Finance Policies</p>                                </div>
-                                <div id="companyInfoDiv" class="col">
-                                    <img src="./img/youtube-icon.png">
-                                    <img src="./img/facebook-icon.png">
-                                </div>
-                            </div>
+            <footer class="footer">
+                <div id="customFooter" class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <p><a href="">Doctors</p></a>
+                            <p><a href="">Services</p></a>
+                            <p><a href="">Patients</p></a>
+                            <p><a href="">Office Info</p></a>
+                            <p><a href="">Patient Forms</p></a>
+                            <p><a href="">News</p></a>
+                            <p><a href="">Contact</p></a>
+                        </div>
+                        <div id="generalInfoDiv" class="col-3">
+                            <h4>General Office Info</h4>
+                            <p><a href="">Office Locations</p></a>
+                            <p><a href="">Hours & Appointments</p></a>
+                            <p><a href="">Emergencies</p></a>
+                            <p><a href="">Telephone Calls</p></a>
+                            <p><a href="">Prescriptions</p></a>
+                            <p><a href="">Hospitalizations</p></a>
+                            <p><a href="">Billing & Finance Policies</p></a>                                
+                        </div>
+                        <div id="companyInfoDiv" class="col-4">
+                            <img src="./img/facebook-icon.png">
+                            <img id="youtubeIconId" src="./img/youtube-icon.png">
+                            <img id="footerCompanyLogo" src="./img/logo.png">
+                            <p class="copyrightTextClass">Copyright @2006-2015 Doctor's Office</p>
+                            <p class="copyrightTextClass">A VEXING MEDIA Creation</p>
+                        </div>
                     </div>
-                </footer>
+                </div>
+            </footer>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         </div>
     </div>
 </body>
-
 </html>

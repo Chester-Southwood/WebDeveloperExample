@@ -1,6 +1,18 @@
 /*Variables*/
 /*Mixins*/
 /*Style Tags*/
+a {
+  color: white !important;
+}
+
+a.nav-link:hover {
+  text-decoration: underline !important;
+}
+
+.bg-transparent {
+  background-color: #31503e;
+}
+
 #blackWhiteGradiantId {
   background: -webkit-gradient(linear, left top, right top, color-stop(5%, gray), color-stop(62%, #f6f6f6));
   background: linear-gradient(to right, gray 5%, #f6f6f6 62%);
@@ -9,17 +21,14 @@
 }
 
 #blackWhiteGradiantId img {
-  width: 100px;
-  height: 100px;
+  width: 115px;
+  height: 115px;
   margin-left: 15%;
 }
 
 body {
   margin: 0%;
-  height: 100%;
   display: block;
-  width: 100%;
-  height: 95vh !important;
 }
 
 .brownLineSeparator {
@@ -33,6 +42,23 @@ body {
   margin: 0px;
 }
 
+#companyNameClass {
+  color: #31503e;
+  padding: 20px 20px 20px 40px;
+}
+
+#companyPhoneClass {
+  color: #9f4715;
+  padding: 20px;
+}
+
+.copyrightTextClass {
+  float: right;
+  font-size: 12px;
+  margin-left: 100px;
+  margin-bottom: 5px;
+}
+
 #customFooter {
   padding-top: 10px;
   padding-bottom: 20px;
@@ -44,9 +70,17 @@ body {
   padding-right: 0px;
 }
 
+#companyInfoDiv {
+  padding: 0px;
+}
+
+#companyInfoDiv img {
+  float: right;
+  margin-left: 10px;
+}
+
 #descriptionId {
   margin: 10px;
-  width: 100%;
   height: auto;
 }
 
@@ -61,9 +95,13 @@ div {
   padding-right: 0px;
 }
 
+#footerCompanyLogo {
+  margin-top: 40px;
+  width: 120px;
+}
+
 #footerImageBackgroundId {
   background-image: url("../img/footer-background.png");
-  width: 100%;
   background-position: 20%, 10%;
 }
 
@@ -77,17 +115,26 @@ div {
 
 #generalInfoDiv p {
   text-decoration: underline;
-  margin: 0px;
+  margin: 5px;
+  padding-bottom: 4px;
 }
 
-#generalInfoDiv h5 {
-  padding: 0px;
-  margin: 0px;
+#generalInfoDiv h4 {
+  padding-bottom: 5px;
+  font-weight: normal;
 }
 
 #headerOneStyle {
   color: #31503e;
   margin-bottom: 0px;
+}
+
+#headerRowId div {
+  padding: 0px;
+}
+
+#headerRowId div img {
+  margin-left: 0px;
 }
 
 #headerTwoStyle {
@@ -96,7 +143,6 @@ div {
 
 #imageBackgroundId {
   background-image: url("../img/header-background.png");
-  width: 100%;
   height: 71px;
   background-position: 100%, 0%;
   color: #9f4715;
@@ -113,7 +159,6 @@ div {
 }
 
 #inner {
-  width: 100%;
   display: block;
 }
 
@@ -123,23 +168,41 @@ div {
   widows: 100%;
 }
 
+#menuDivId .container .col-10 {
+  max-width: inherit;
+  /*fix small, navbar drop down menu mistake of last link item resizing too early*/
+}
+
 .navbar {
   margin: 0px !important;
   padding: 0px !important;
 }
 
+.navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+  background: #31503e;
+  text-align: center;
+}
+
+.navbarMargin {
+  margin-left: 15%;
+}
+
+.navItemWithBorder {
+  border-left: white;
+  border-left-style: solid;
+}
+
 .nav-link {
   color: white;
-  margin-left: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.nav-link:hover {
-  color: white;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.patientButtonsClass {
+.patientLinksClass {
   font-size: 100%;
   font-family: inherit;
   border: 0;
@@ -150,5 +213,10 @@ div {
   margin-bottom: 10px;
   color: white;
   background-color: #9f4715;
+  text-align: center;
+}
+
+#youtubeIconId {
+  margin-left: 200px !important;
 }
 /*# sourceMappingURL=style.css.map */
