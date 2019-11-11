@@ -16,6 +16,11 @@ $menuBackgroundColor: rgb(49, 80,62);
     background: $linearGradiantBackground;
     height: 82px;
     width: 100%;
+    img{
+        width: 100px;
+        height: 100px;
+        margin-left:15%;
+    }
 }
 
 body {
@@ -123,6 +128,22 @@ div{
     background-color: $menuBackgroundColor;
     height: 45px;
     widows: 100%;
+}
+
+.navbar{
+        margin: 0px !important;
+        padding: 0px !important;
+}
+
+.nav-link{
+    color: white;
+    margin-left: 60px;
+}
+
+.nav-link:hover{
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .patientButtonsClass{

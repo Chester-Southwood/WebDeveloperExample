@@ -15,8 +15,39 @@
 <body>
 
     <div class="brownLineSeparator"></div>
-    <div id="blackWhiteGradiantId"></div>
-    <div id="menuDivId"></div>
+    <div id="blackWhiteGradiantId">
+        <img src="./img/logo.png">
+    </div>
+    <div id="menuDivId">
+        <div class="container">
+            <div class="col-10">
+                <nav class="navbar navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav navbar-nav ml-auto"> <!--TODO: Links aren't being underline when hovered.. Unknown reasons why since hover tag is added to link tag-->
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Doctors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Patients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Office Info</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
     <div id="imageBackgroundId">
         <div class="container">  
             <header> <!--TODO Fix size of h3 to match h1 for headerOneStyle, size should not be hardcoded for div-->
@@ -44,7 +75,7 @@
                 <div id="forPatientsDivId" class="col-3">
                     <h5>For Patients</h5>
                     <p>Download and print patient forms, sign into the patient portal or schedule an appointment.</p>
-                    <button class="patientButtonsClass">Patient Forms >></button>
+                    <button class="patientButtonsClass">Patient Forms >></button> <!--Should be links, not buttons. I made the same mistake as I did for earlier project. Simple design should be followed. A link should be a link, a button should not be hidden as a link, not good experience for screenreaders...-->
                     <button class="patientButtonsClass">Patient Portal >></button>
                     <button class="patientButtonsClass">Make an Appointment >></button>
                 </div>

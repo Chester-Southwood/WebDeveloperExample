@@ -8,6 +8,12 @@
   width: 100%;
 }
 
+#blackWhiteGradiantId img {
+  width: 100px;
+  height: 100px;
+  margin-left: 15%;
+}
+
 body {
   margin: 0%;
   height: 100%;
@@ -115,6 +121,22 @@ div {
   background-color: #31503e;
   height: 45px;
   widows: 100%;
+}
+
+.navbar {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.nav-link {
+  color: white;
+  margin-left: 60px;
+}
+
+.nav-link:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .patientButtonsClass {
